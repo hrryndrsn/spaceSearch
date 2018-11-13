@@ -316,7 +316,7 @@ renderGridControls =
             [ text "IIII" ]
         , a
             [ target "_blank"
-            , href "https://github.com/hrryndrsn/placesSearch"
+            , href "https://github.com/hrryndrsn/spaceSearch"
             ]
             [ button
                 [ class "gridSettingButton githubButton" ]

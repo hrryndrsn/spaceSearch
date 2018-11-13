@@ -5,7 +5,6 @@ import Html exposing (..)
 import Html.Attributes exposing (autofocus, class, href, id, placeholder, src, target, value)
 import Html.Events exposing (..)
 import Http
-import Icons
 import Json.Decode as Decode
 import Json.Decode.Pipeline exposing (custom, hardcoded, optional, required)
 import Svg exposing (path, svg)
@@ -329,7 +328,7 @@ renderCloseIcon =
     svg
         [ class "searchIcon", width "17", height "17", viewBox "0 0 17 17", fill "none" ]
         [ path
-            [ fillRule "evenodd", clipRule "evenodd", d Icons.close ]
+            [ fillRule "evenodd", clipRule "evenodd", d close ]
             []
         ]
 
@@ -339,7 +338,7 @@ renderSearchIcon =
     svg
         [ class "searchIcon", width "14", height "14", viewBox "0 0 14 14", fill "none" ]
         [ path
-            [ fillRule "evenodd", clipRule "evenodd", d Icons.search ]
+            [ fillRule "evenodd", clipRule "evenodd", d search ]
             []
         ]
 
@@ -349,7 +348,7 @@ renderGithubIcon =
     svg
         [ class "searchIcon", width "16", height "16", viewBox "0 0 24 24", fill "none" ]
         [ path
-            [ fillRule "evenodd", clipRule "evenodd", d Icons.github ]
+            [ fillRule "evenodd", clipRule "evenodd", d github ]
             []
         ]
 
@@ -450,3 +449,22 @@ imageDataDecoder =
         |> required "title" Decode.string
         |> optional "description" Decode.string "Classified"
         |> optional "keywords" (Decode.list Decode.string) [ "no keywords" ]
+
+
+
+-- ICON SVG PATHS
+
+
+search : String
+search =
+    "M8.992 10.0384C6.85392 11.6822 3.77655 11.5249 1.81822 9.56656C-0.31113 7.43722 -0.31113 3.98487 1.81822 1.85552C3.94756 -0.273822 7.39991 -0.273822 9.52926 1.85552C11.4309 3.75718 11.6343 6.71402 10.1393 8.84134L13.9292 12.6313L12.7571 13.8035L8.992 10.0384ZM9.08945 7.7915C8.92722 8.05737 8.7311 8.30839 8.50113 8.53836C8.3289 8.71059 8.14488 8.86382 7.95165 8.99805C6.39295 10.0809 4.23566 9.9277 2.84635 8.5384C1.28483 6.97688 1.28483 4.44515 2.84635 2.88363C4.40787 1.32211 6.93959 1.32211 8.50111 2.88363C9.83265 4.21517 10.0288 6.25216 9.08945 7.7915Z"
+
+
+github : String
+github =
+    "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+
+
+close : String
+close =
+    "M8.50001 9.91423L15.2929 16.7071L16.7071 15.2929L9.91423 8.50002L16.7071 1.70712L15.2929 0.292908L8.50001 7.0858L1.70712 0.292908L0.292908 1.70712L7.0858 8.50002L0.292908 15.2929L1.70712 16.7071L8.50001 9.91423Z"

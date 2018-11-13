@@ -1,0 +1,26 @@
+{
+  "name": "spacesearch",
+  "version": "1.0.0",
+  "description": "Fun with Go + Elm + google places apis",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "elm-app build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrryndrsn/spaceSearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrryndrsn/spaceSearch/issues"
+  },
+  "homepage": "https://github.com/hrryndrsn/spaceSearch#readme",
+  "devDependencies": {
+    "create-elm-app": "^2.2.3"
+  }
+}

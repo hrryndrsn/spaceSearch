@@ -29,7 +29,7 @@ h2 {
 
 .siteTitle {
   font-size: 16px;
-  margin-top: 100px;
+  margin-top: 50px;
   opacity: 0.5;
   line-height: 60px;
 }
@@ -294,6 +294,7 @@ ul.results {
 .closeButton svg:hover {
   fill: white;
   cursor: pointer;
+  mix-blend-mode: difference;
 }
 
 .modelDescription {

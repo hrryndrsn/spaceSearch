@@ -1,3 +1,4 @@
-# placesSearch
+# Space Search
 
-Fun with Go + Elm + google places apis
+An interface for NASA [Image & Video Library] (https://images.nasa.gov/) built with Elm + Go
+

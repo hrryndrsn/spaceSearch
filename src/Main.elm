@@ -8,7 +8,6 @@ import Http
 import Icons
 import Json.Decode as Decode
 import Json.Decode.Pipeline exposing (custom, hardcoded, optional, required)
-import Key exposing (key)
 import Svg exposing (path, svg)
 import Svg.Attributes exposing (class, clip, clipRule, d, fill, fillRule, height, viewBox, width)
 import Url.Builder as Url

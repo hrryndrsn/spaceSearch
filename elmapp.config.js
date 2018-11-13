@@ -1,3 +1,3 @@
 module.exports = {
-    "homepage": "https://myusername.github.io/my-app",
+    "homepage": "https://hrryndrsn.github.io/spaceSearch",
 }

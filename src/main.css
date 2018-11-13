@@ -1,0 +1,401 @@
+body {
+  font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  text-align: left;
+  color: #eee;
+  background: #000;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 { 
+  margin: 0;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-content: center;
+  height: 50px;
+  width: 100%;
+  /* background: #eee; */
+}
+
+.siteTitle {
+  font-size: 16px;
+  margin-top: 100px;
+  opacity: 0.5;
+  line-height: 60px;
+}
+
+.siteTitle a {
+  color:  #00FE75;
+  text-decoration: none;
+}
+
+
+.siteTitle a:visited { text-decoration: none; color: #00FE75 }
+
+
+.searchGroup {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.searchInput {
+  outline: none;
+  font-size: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  border: none;
+  color: rgba(255, 255, 255, 0.25);
+  transition: color 0.5s ease-in-out;
+  background: #1A1A1A;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.searchButton {
+  background: #000;
+  color: rgba(255, 255, 255, 0.25);;
+  border: none;
+  outline: none;
+  transition: background 0.1s ease-in-out;
+  font-family: inherit;
+  font-size: 24px;
+}
+
+.searchButton:hover {
+  background: white;
+  color: black;
+}
+
+.searchInput:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+ul.results {
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* Results  */
+.result {
+  border-bottom: 1px solid #eee;
+  transition: background 0.1s ease-in-out;
+  padding-top: 20px;
+}
+
+.result:hover {
+  background: #eee;
+}
+
+.resultsGroup {
+  display: grid;
+  gap: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+/* One col styles  */
+.oneCol {
+  grid-template-columns: 1fr;
+  transition: 0.5s ease-in-out;
+}
+
+.oneCol div.item {
+  max-height: 90vh;
+  grid-template-rows: 9fr 1fr;
+  transition: 0.5s ease-in-out;
+}
+
+/* two col styles  */
+.twoCol {
+  grid-template-columns: 1fr 1fr;
+  max-height: 40vw;
+  transition: 0.5s ease-in-out;
+}
+
+.twoCol div.item {
+  max-height: 40vw;
+  grid-template-rows: 6fr 1fr;
+  transition: 0.5s ease-in-out;
+}
+
+/* four col styles */
+.fourCol {
+  grid-template-columns: 1fr 1fr 1fr 1fr  ;
+  transition: 0.5s ease-in-out;
+}
+.fourCol div.item {
+  max-height: 20vw;
+  grid-template-rows: 3fr 1fr;
+  transition:  0.5s ease-in-out;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  background:  #1A1A1A;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.itemImage {
+  overflow: hidden;
+}
+
+.itemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.itemDetails {
+  background:  #1A1A1A;
+  display: flex;
+  align-items: center;
+}
+
+.itemName {
+  padding: 0 30px;
+  color: rgba(255, 255, 255, 0.50);
+  transition: color 0.2s ease-in
+}
+
+.item:hover .itemName {
+  color: #fff;
+}
+
+.gridSettings {
+  position: fixed;
+  top: 25vh;
+  left: 0;;
+  display: grid;
+  grid-template-rows: 3fr;
+  row-gap: 25px;
+  width: 10vw;
+  justify-content: center;
+}
+
+.gridSettings button {
+  background: none;
+  color: rgba(255, 255, 255, 0.50);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.gridSettings button:hover {
+  background: #1A1A1A;
+  color: white;
+  fill: white;
+}
+
+.guthubIcon {
+  margin-top: 5px;
+  width: 50%;
+}
+
+.searchIcon {
+  margin-top: 5px;
+  fill: rgba(255, 255, 255, 0.50);
+}
+
+
+.selectedImageModal {
+  visibility: visible;
+  position: fixed;
+  top: 5vh;
+  left: 10vw;
+  background: #1A1A1A;
+  width: 80vw;
+  /* height: 80vh; */
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 10px;  
+  overflow: hidden;
+}
+
+.modalBlanket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+
+.selectedImageModal {
+  /* width: 100%; */
+}
+
+.modalImage {
+  width: 100%;
+  overflow: hidden;
+}
+
+.modalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalImageDetails {
+  margin-left: 20px;
+  width: 100%;
+  max-height: 30%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #1a1a1a;
+  overflow: hidden; 
+  color:  rgba(255, 255, 255, 0.50);
+}
+
+.modalHeaderBlock {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 75px;
+}
+
+.modalDetailsBlock {
+  padding: 10px 20px;
+}
+
+.closeButton {
+  width:  50px;
+  background: none;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.closeButton svg:hover {
+  fill: white;
+  cursor: pointer;
+}
+
+.modelDescription {
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 80px;
+    overflow: hidden;
+}
+
+.modalHeading {
+  color: white;
+}
+/* Media queries  */
+
+
+/* M */ 
+@media (max-width: 900px) {
+  .gridSettings {
+    /* left: 2vw; */
+  }
+
+  .searchInput {
+    margin-bottom: 30px;
+  }
+}
+
+/* S */
+@media (max-width:700px) {
+  .siteTitle {
+    margin-top: 30px;
+  }
+
+  .searchInput {
+    padding: 0px;
+    line-height: 80px;
+    padding-left: 10px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    width: 98%;
+  }
+
+  .gridSettings {
+    position: fixed;
+    bottom: 0;
+    left: 10vw;
+    width: 80vw;
+    background: #000;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    top: auto;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .itemDetails {
+    display: nonel
+  }
+}
+
+/* Loading  balls ------------------------------------------------------- */
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+}
+
+.line {
+  animation: expand 1s ease-in-out infinite;
+  border-radius: 10px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 3px;
+  width: 1px;
+  height: 25px;
+}
+
+.line:nth-child(1) {
+  background: #fff
+}
+
+.line:nth-child(2) {
+  animation-delay: 180ms;
+  background: #fff;
+}
+
+.line:nth-child(3) {
+  animation-delay: 360ms;
+  background: #fff;
+}
+
+.line:nth-child(4) {
+  animation-delay: 540ms;
+  background: #fff;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+  }
+}
+
+/* ----------------------------------------------------- */
